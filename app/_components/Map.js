@@ -10,7 +10,6 @@ export default function Map() {
   useEffect(() => {
     if (!mapRef.current) return;
 
-    // Initialize the map with latitude, longitude, and zoom level
     const map = L.map(mapRef.current, {
       center: [43.7712167, 11.2472393], // Center the map on Caffe del 900
       zoom: 17, // Starting zoom level

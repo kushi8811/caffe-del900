@@ -1,7 +1,5 @@
-"use client";
 import Footer from "../_components/Footer";
-import dynamic from "next/dynamic";
-const Map = dynamic(() => import("@/app/_components/Map"), { ssr: false });
+import MapClientWrapper from "../_components/MapWrapper";
 
 function Page() {
   return (
@@ -14,7 +12,7 @@ function Page() {
 
         {/* Map container */}
         <div className="rounded-lg overflow-hidden shadow-lg z-10">
-          <Map />
+          <MapClientWrapper />
         </div>
       </div>
 

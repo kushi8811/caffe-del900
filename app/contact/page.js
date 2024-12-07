@@ -1,7 +1,7 @@
 "use client";
-import dynamic from "next/dynamic";
 import Footer from "../_components/Footer";
-const Map = dynamic(() => import("../_components/Map"), { ssr: false });
+import dynamic from "next/dynamic";
+const Map = dynamic(() => import("@/app/_components/Map"), { ssr: false });
 
 function Page() {
   return (

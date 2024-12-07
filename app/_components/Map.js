@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -8,39 +6,35 @@ export default function Map() {
   const mapRef = useRef(null);
 
   useEffect(() => {
-    if (!mapRef.current) return;
+    if (typeof window === "undefined") return; // Ensures code only runs in the browser
 
     const map = L.map(mapRef.current, {
-      center: [43.7712167, 11.2472393], // Center the map on Caffe del 900
-      zoom: 17, // Starting zoom level
-      maxZoom: 19, // Allowing zoom up to level 19
-      minZoom: 13, // Set the minimum zoom level
+      center: [43.7712167, 11.2472393],
+      zoom: 17,
+      maxZoom: 19,
+      minZoom: 13,
     });
 
-    // Add OpenStreetMap tile layer
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-      maxZoom: 19, // Maximum zoom
+      maxZoom: 19,
     }).addTo(map);
 
-    // Use the default marker icon and set the iconUrl
     const defaultIcon = L.icon({
       iconUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png", // URL of the default icon
+        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png",
       shadowUrl:
-        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png", // Shadow image for the marker
-      iconSize: [25, 41], // Size of the marker
-      iconAnchor: [12, 41], // The point of the marker that will be anchored at the position
+        "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png",
+      iconSize: [25, 41],
+      iconAnchor: [12, 41],
     });
 
-    // Add marker to the map
     L.marker([43.7712167, 11.2472393], { icon: defaultIcon })
       .addTo(map)
       .bindPopup("Caffe del 900 is here! ☕")
       .openPopup();
 
-    // Cleanup function to remove the map on unmount
     return () => map.remove();
   }, []);
 

@@ -1,6 +1,5 @@
 function Button({ onClick, children }) {
   return (
-    /* From Uiverse.io by AKAspidey01 */
     <button
       onClick={onClick}
       className="cursor-pointer font-semibold overflow-hidden relative z-100 border border-primary-700 group px-8 py-2"

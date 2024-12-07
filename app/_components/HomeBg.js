@@ -3,12 +3,16 @@ import { useState, useEffect } from "react";
 import bg from "@/public/caffe-images/bg1.jpg";
 import Button from "./Button";
 import Spinner from "./Spinner";
+import { useRouter } from "next/navigation";
 
 function HomeBg() {
   const [loading, setLoading] = useState(true);
   const [message, setMessage] = useState("");
   const [fade, setFade] = useState(false);
-
+  const router = useRouter();
+  const handleClick = () => {
+    router.push("/menu");
+  };
   useEffect(() => {
     let timeout1, timeout2;
 
@@ -72,7 +76,7 @@ function HomeBg() {
         >
           {message}
         </h1>
-        <Button>See our menu</Button>
+        <Button onClick={handleClick}>See our menu</Button>
       </div>
     </div>
   );

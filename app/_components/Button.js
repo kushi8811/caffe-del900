@@ -1,15 +1,8 @@
-"use client";
-import { useRouter } from "next/navigation";
-
-function Button({ children }) {
-  const router = useRouter();
-  const handleClick = () => {
-    router.push("/menu");
-  };
+function Button({ onClick, children }) {
   return (
     /* From Uiverse.io by AKAspidey01 */
     <button
-      onClick={handleClick}
+      onClick={onClick}
       className="cursor-pointer font-semibold overflow-hidden relative z-100 border border-primary-700 group px-8 py-2"
     >
       <span className="relative z-10 text-primary-700 group-hover:text-white text-xl font-bold duration-500">

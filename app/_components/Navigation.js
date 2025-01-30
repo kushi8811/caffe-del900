@@ -21,7 +21,7 @@ function Navigation() {
       </button>
 
       {/* Menu Links for Large Screens */}
-      <ul className="hidden lg:flex justify-end gap-10 p-4 text-lg text-black font-bold">
+      <ul className="hidden lg:flex justify-end gap-10 p-4 text-lg text-black font-normal">
         <li>
           <Link href="/" className="hover:text-primary-700 transition-colors">
             Home
@@ -33,6 +33,14 @@ function Navigation() {
             className="hover:text-primary-700 transition-colors"
           >
             About
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/pizzeria"
+            className="hover:text-primary-700  transition-colors"
+          >
+            Pizzeria
           </Link>
         </li>
         <li>
@@ -80,7 +88,7 @@ function Navigation() {
           >
             ✖
           </button>
-          <ul className="flex flex-col gap-6 text-2xl text-white font-semibold">
+          <ul className="flex flex-col gap-6 text-2xl text-white font-normal">
             <li>
               <Link
                 href="/"
@@ -97,6 +105,15 @@ function Navigation() {
                 onClick={toggleMenu}
               >
                 About
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/pizzeria"
+                className="block py-2 hover:text-accent-200 transition-colors"
+                onClick={toggleMenu}
+              >
+                Pizzeria
               </Link>
             </li>
             <li>

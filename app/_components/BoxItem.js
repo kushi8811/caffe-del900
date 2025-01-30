@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+
 function BoxItem({ title, image, description, link }) {
   return (
     <Link href={link}>

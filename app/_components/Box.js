@@ -5,6 +5,8 @@ import caffe from "@/public/caffe-images/caffetteria.jpg";
 import brunch from "@/public/caffe-images/brunch.jpg";
 import cocktail from "@/public/caffe-images/cocktail.jpg";
 import bakery from "@/public/caffe-images/bakery.jpg";
+import pizza from "@/public/caffe-images/pizza.jpg";
+
 import BoxItem from "./BoxItem";
 
 function Box() {
@@ -45,6 +47,12 @@ function Box() {
       image: brunch,
       description: "Delicious brunch to start your day.",
       link: "/menu",
+    },
+    {
+      title: "Pizzeria",
+      image: pizza,
+      description: "Experience the true taste of tradition in every slice",
+      link: "/pizzeria",
     },
     {
       title: "Bakery",

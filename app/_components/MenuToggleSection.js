@@ -21,11 +21,11 @@ const MenuToggleSection = ({ toggleMenu, menuVisible }) => {
   };
 
   return (
-    <div className="section py-28 w-full border grid md:grid-cols-2 bg-gray-200 text-gray-800">
+    <div className="section py-19.5 w-full border grid md:grid-cols-2 bg-gray-200 text-gray-800">
       {/* Pizza Image */}
       <div className="subsec flex-none overflow-hidden max-h-96">
         <Image
-          className="w-full transition-transform duration-500 hover:scale-105"
+          className="pt-2 w-full transition-transform duration-500 hover:scale-105"
           src={pizzaCrust}
           alt="Keto Pizza"
           width={600}
@@ -34,7 +34,7 @@ const MenuToggleSection = ({ toggleMenu, menuVisible }) => {
       </div>
 
       {/* Description Section */}
-      <div className="subsec my-auto p-8">
+      <div className="subsec my-auto mt-1 p-4">
         <div className="title font-semibold text-3xl mb-5">
           What is paleo pizza crust made out of?
         </div>

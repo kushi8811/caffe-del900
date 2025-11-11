@@ -6,6 +6,7 @@ const SMTP_PORT = 587;
 const SMTP_USER = "vasiltrebickatl@gmail.com"; // the owner’s Gmail (used to authenticate)
 const SMTP_PASS = "nhscznytgnnjcyny"; // app password
 const OWNER_EMAIL = "vasiltrebickatl@gmail.com";
+
 if (!SMTP_USER || !SMTP_PASS || !OWNER_EMAIL) {
   console.warn(
     "⚠️ Mailer not fully configured! Check SMTP_USER, SMTP_PASS, and OWNER_EMAIL"

@@ -78,7 +78,7 @@ export const menu = {
       name: "Il Capo",
       description:
         "Salsa di pomodoro, pomodorini, prosciutto crudo, scaglie di parmigiano, rucola, mozzarella",
-      price: 143,
+      price: 14,
     },
     {
       name: "La Fiorentina DOC",

@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import "leaflet/dist/leaflet.css";
 
 @layer components {
   .spinner {
@@ -34,9 +33,10 @@
   height: 100%;
   /* Add your background pattern here */
   /* background-color: lightblue; */
-  background-image: radial-gradient(black 55%, #0000),
+  background-image:
+    radial-gradient(black 55%, #0000),
     /* radial-gradient(black 55%, #0000), */
-      linear-gradient(
+    linear-gradient(
         135deg,
         red,
         orange,
@@ -47,7 +47,9 @@
         indigo,
         deeppink
       );
-  background-size: 100% 0.5%, contain;
+  background-size:
+    100% 0.5%,
+    contain;
   /* background-blend-mode: hard-light; */
   /* background-position: 0 0, 1em 1em, 0 0; */
 }

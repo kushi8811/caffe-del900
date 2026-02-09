@@ -3,13 +3,13 @@ import nodemailer from "nodemailer";
 
 const SMTP_HOST = "smtp.gmail.com";
 const SMTP_PORT = 587;
-const SMTP_USER = "vasiltrebickatl@gmail.com"; // the owner’s Gmail (used to authenticate)
-const SMTP_PASS = "nhscznytgnnjcyny"; // app password
-const OWNER_EMAIL = "vasiltrebickatl@gmail.com";
+const SMTP_USER = "caffepizzeriadel900@gmail.com"; // the owner’s Gmail (used to authenticate)
+const SMTP_PASS = "xocmbylrjkqiuicl"; // app password
+const OWNER_EMAIL = "caffepizzeriadel900@gmail.com";
 
 if (!SMTP_USER || !SMTP_PASS || !OWNER_EMAIL) {
   console.warn(
-    "⚠️ Mailer not fully configured! Check SMTP_USER, SMTP_PASS, and OWNER_EMAIL"
+    "⚠️ Mailer not fully configured! Check SMTP_USER, SMTP_PASS, and OWNER_EMAIL",
   );
 }
 

@@ -15,7 +15,7 @@ function Footer() {
                   href="mailto:info@caffedel900.com"
                   className="text-primary-300 hover:text-primary-200"
                 >
-                  info@caffedel900.com
+                  caffepizzeriadel900@gmail.com
                 </a>
               </p>
               <p className="flex items-center text-sm">

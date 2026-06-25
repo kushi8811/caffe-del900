@@ -4,7 +4,7 @@ import nodemailer from "nodemailer";
 const SMTP_HOST = "smtp.gmail.com";
 const SMTP_PORT = 587;
 const SMTP_USER = "caffepizzeriadel900@gmail.com"; // the owner’s Gmail (used to authenticate)
-const SMTP_PASS = "xocmbylrjkqiuicl"; // app password
+const SMTP_PASS = "nonuhhzdhivairge"; // app password
 const OWNER_EMAIL = "caffepizzeriadel900@gmail.com";
 
 if (!SMTP_USER || !SMTP_PASS || !OWNER_EMAIL) {

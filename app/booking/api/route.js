@@ -18,7 +18,7 @@ export async function POST(req) {
     if (!name || !date || !time || !guest || !type_of_eating) {
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -33,7 +33,7 @@ export async function POST(req) {
     if (isNaN(chosen.getTime()) || chosen <= new Date()) {
       return new Response(
         JSON.stringify({ error: "Invalid or past date/time" }),
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -82,7 +82,7 @@ export async function POST(req) {
           `,
         },
         clientMsg: {
-          from: `"Caffe del 900" <no-reply@caffedel900.com>`,
+          from: `"Caffe del 900" <caffepizzeriadel900@gmail.com>`,
           subject: `Booking confirmation - ${date} ${time}`,
           text: `
 Hi ${name}, 👋
@@ -111,7 +111,7 @@ We look forward to welcoming you soon!
 
     return new Response(
       JSON.stringify({ message: "Booking created", booking }),
-      { status: 200 }
+      { status: 200 },
     );
   } catch (err) {
     console.error("Booking API unexpected error:", err);
